@@ -7,43 +7,43 @@
 
 > **La mejor churrasquería a domicilio de Buenos Aires** - Aplicación web moderna con funcionalidades completas de e-commerce.
 
-## 🚀 **Características Principales**
+## Características Principales
 
-### 🛒 **Carrito de Compras**
+### Carrito de Compras
 - Widget de carrito en navbar
 - Control de cantidades
 - Cálculo automático de totales
 - Persistencia en localStorage
 - Checkout completo
 
-### 👤 **Sistema de Autenticación**
+### Sistema de Autenticación
 - Login/registro de usuarios
 - Gestión de sesiones
 - Perfiles de usuario
 - Modal responsive
 - Validación de formularios
 
-### 📱 **PWA (Progressive Web App)**
+### PWA (Progressive Web App)
 - Instalable como app móvil
 - Funcionalidad offline
 - Cache de recursos
 - Manifest configurado
 - Service Worker
 
-### 🔔 **Notificaciones**
+### Notificaciones
 - Sistema de toast notifications
 - Diferentes tipos (success, error, warning, info)
 - Auto-dismiss
 - Animaciones suaves
 
-### 🎨 **UI/UX Moderna**
+### UI/UX Moderna
 - Diseño responsive
 - Animaciones fluidas
 - Paleta de colores rojo/marrón
 - Componentes reutilizables
 - Accesibilidad completa
 
-### 🏗️ **Arquitectura Escalable**
+### Arquitectura Escalable
 - Composable pattern para lógica reutilizable
 - Sistema de validación centralizado
 - Utilidades de formateo consistentes
@@ -52,7 +52,7 @@
 - Code splitting y optimización de build
 - ESLint + Prettier para calidad de código
 
-## 📋 **Tabla de Contenidos**
+## Tabla de Contenidos
 
 - [Instalación](#instalación)
 - [Uso](#uso)
@@ -64,13 +64,13 @@
 - [Contribuir](#contribuir)
 - [Licencia](#licencia)
 
-## 🛠 **Instalación**
+## Instalación
 
-### **Prerrequisitos**
+### Prerrequisitos
 - Node.js (versión 16 o superior)
 - npm o yarn
 
-### **Pasos de Instalación**
+### Pasos de Instalación
 
 1. **Clonar el repositorio**
 ```bash
@@ -93,7 +93,7 @@ npm run dev
 http://localhost:5173
 ```
 
-### **Scripts Disponibles**
+### Scripts Disponibles
 
 ```bash
 # Desarrollo
@@ -109,9 +109,9 @@ npm run preview
 npm run lint
 ```
 
-## 🎯 **Uso**
+## Uso
 
-### **Funcionalidades Principales**
+### Funcionalidades Principales
 
 1. **Navegación**
    - Menú principal con categorías
@@ -136,7 +136,7 @@ npm run lint
    - Validación de datos
    - Confirmación de pedido
 
-### **Ejemplos de Uso**
+### Ejemplos de Uso
 
 ```javascript
 // Agregar producto al carrito
@@ -152,7 +152,7 @@ authStore.login({ email, password })
 window.$toast.success('Éxito', 'Producto agregado')
 ```
 
-## 📁 **Estructura del Proyecto**
+## Estructura del Proyecto
 
 ```
 churasquero/
@@ -196,156 +196,150 @@ churasquero/
 └── vite.config.js
 ```
 
-## 🛠 **Tecnologías**
+## Tecnologías
 
-### **Frontend**
+### Frontend
 - **Vue.js 3** - Framework progresivo
 - **Vite** - Build tool y dev server
 - **Vue Router** - Enrutamiento SPA
 - **Pinia** - Estado global
 - **CSS3** - Estilos y animaciones
 
-### **Librerías**
+### Librerías
 - **Axios** - Cliente HTTP
-- **@vueuse/core** - Utilidades Vue
-- **date-fns** - Manejo de fechas
+- **@vueuse/core** - Utilidades de Vue
+- **date-fns** - Manipulación de fechas
 - **vite-plugin-pwa** - Configuración PWA
 
-### **Herramientas de Desarrollo**
-- **Vite** - Build tool
-- **Vue DevTools** - Debugging
-- **Git** - Control de versiones
+### Herramientas de Desarrollo
+- **ESLint** - Linting de código
+- **Prettier** - Formateo de código
+- **Vue DevTools** - Herramientas de desarrollo
 
-## ⚡ **Funcionalidades**
+## Funcionalidades
 
-### **✅ Implementadas**
-- [x] Estado global con Pinia
-- [x] Carrito de compras funcional
-- [x] Sistema de autenticación
-- [x] PWA configurado
-- [x] Checkout completo
-- [x] Notificaciones en tiempo real
-- [x] API service preparado
-- [x] Diseño responsive
-- [x] Animaciones y transiciones
-- [x] Persistencia de datos
+### Carrito de Compras
+- Agregar/remover productos
+- Control de cantidades
+- Cálculo automático de totales
+- Persistencia en localStorage
+- Proceso de checkout completo
 
-### **🔄 En Desarrollo**
-- [ ] Integración con backend real
-- [ ] Sistema de pagos
-- [ ] Geolocalización
-- [ ] Push notifications
-- [ ] Chat en tiempo real
+### Autenticación
+- Registro de usuarios
+- Login/logout
+- Gestión de sesiones
+- Perfiles de usuario
+- Validación de formularios
 
-### **📋 Próximas Mejoras**
-- [ ] Dashboard de administración
-- [ ] Sistema de reseñas
-- [ ] Programa de fidelidad
-- [ ] Analytics y métricas
-- [ ] Testing completo
+### PWA
+- Instalable como app móvil
+- Funcionalidad offline
+- Cache de recursos
+- Service Worker configurado
 
-## 🌐 **API**
+### Notificaciones
+- Sistema de toast notifications
+- Diferentes tipos (success, error, warning, info)
+- Auto-dismiss configurable
+- Animaciones suaves
 
-### **Endpoints Preparados**
+## API
+
+### Endpoints Principales
 
 ```javascript
 // Autenticación
-POST /auth/login
-POST /auth/register
-GET /auth/profile
+POST /api/auth/login
+POST /api/auth/register
+POST /api/auth/logout
 
-// Menú
-GET /menu
-GET /categories
-GET /menu/:id
+// Productos
+GET /api/products
+GET /api/products/:id
+
+// Carrito
+GET /api/cart
+POST /api/cart/add
+PUT /api/cart/update
+DELETE /api/cart/remove
 
 // Pedidos
-POST /orders
-GET /orders
-GET /orders/:id
-
-// Churrasqueros
-GET /churrasqueros
-GET /churrasqueros/top
-GET /churrasqueros/:id/reviews
-
-// Reservas
-POST /reservations
-GET /reservations
+POST /api/orders
+GET /api/orders/:id
 ```
 
-### **Configuración**
+### Configuración
 
-```env
-VITE_API_URL=https://api.churasquero.com
+```javascript
+// src/services/api.js
+const API_CONFIG = {
+  BASE_URL: 'https://api.churasquero.com',
+  TIMEOUT: 10000,
+  RETRY_ATTEMPTS: 3
+}
 ```
 
-## 🚀 **Deployment**
+## Deployment
 
-### **Build para Producción**
+### Build para Producción
 
 ```bash
+# Build optimizado
 npm run build
+
+# Preview del build
+npm run preview
 ```
 
-### **Plataformas Recomendadas**
-
-- **Vercel** - Deploy automático
-- **Netlify** - Hosting estático
-- **Firebase Hosting** - Google Cloud
-- **GitHub Pages** - Gratuito
-
-### **Variables de Entorno**
+### Variables de Entorno
 
 ```env
-# Desarrollo
-VITE_API_URL=http://localhost:3000
-
-# Producción
 VITE_API_URL=https://api.churasquero.com
+VITE_APP_TITLE=Churasquero
+VITE_APP_VERSION=2.0.0
 ```
 
-## 🤝 **Contribuir**
+### Configuración PWA
 
-### **Cómo Contribuir**
+- Manifest configurado
+- Service Worker activo
+- Cache de recursos
+- Instalación offline
 
-1. **Fork el proyecto**
-2. **Crea una rama** (`git checkout -b feature/AmazingFeature`)
-3. **Commit tus cambios** (`git commit -m 'Add some AmazingFeature'`)
-4. **Push a la rama** (`git push origin feature/AmazingFeature`)
-5. **Abre un Pull Request**
+## Contribuir
 
-### **Guías de Contribución**
+### Guías de Contribución
 
-- Sigue las convenciones de Vue.js
-- Mantén el código limpio y documentado
-- Agrega tests para nuevas funcionalidades
-- Actualiza la documentación
+1. **Fork del repositorio**
+2. **Crear rama feature**: `git checkout -b feature/nueva-funcionalidad`
+3. **Commit cambios**: `git commit -m 'feat: agregar nueva funcionalidad'`
+4. **Push a la rama**: `git push origin feature/nueva-funcionalidad`
+5. **Crear Pull Request**
 
-## 📄 **Licencia**
+### Estándares de Código
 
-Este proyecto está bajo la Licencia MIT. Ver el archivo `LICENSE` para más detalles.
+- ESLint configurado
+- Prettier para formateo
+- Conventional Commits
+- Tests requeridos
 
-## 👥 **Autores**
+### Estructura de Commits
 
-- **Tu Nombre** - *Desarrollo inicial* - [TuUsuario](https://github.com/TuUsuario)
+```
+feat: nueva funcionalidad
+fix: corrección de bug
+docs: actualización de documentación
+style: cambios de formato
+refactor: refactorización de código
+test: agregar tests
+chore: tareas de mantenimiento
+```
 
-## 🙏 **Agradecimientos**
+## Licencia
 
-- Vue.js team por el excelente framework
-- Vite por las herramientas de desarrollo
-- Comunidad de desarrolladores Vue.js
-
-## 📞 **Contacto**
-
-- **Email**: tu-email@ejemplo.com
-- **GitHub**: [@TuUsuario](https://github.com/TuUsuario)
-- **LinkedIn**: [Tu Perfil](https://linkedin.com/in/tu-perfil)
+Este proyecto está bajo la Licencia MIT. Ver el archivo [LICENSE](LICENSE) para más detalles.
 
 ---
 
-**⭐ Si te gusta este proyecto, dale una estrella en GitHub!**
-
----
-
-*Desarrollado con ❤️ en Buenos Aires, Argentina*
+**Desarrollado con ❤️ para la mejor churrasquería de Buenos Aires**
