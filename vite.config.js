@@ -1,9 +1,9 @@
 import { fileURLToPath, URL } from 'node:url'
-
 import { defineConfig } from 'vite'
 import vue from '@vitejs/plugin-vue'
 import vueDevTools from 'vite-plugin-vue-devtools'
 import { VitePWA } from 'vite-plugin-pwa'
+import { resolve } from 'path'
 
 // https://vite.dev/config/
 export default defineConfig({
@@ -50,7 +50,36 @@ export default defineConfig({
   ],
   resolve: {
     alias: {
-      '@': fileURLToPath(new URL('./src', import.meta.url))
+      '@': fileURLToPath(new URL('./src', import.meta.url)),
+      '@components': resolve(__dirname, 'src/components'),
+      '@views': resolve(__dirname, 'src/views'),
+      '@stores': resolve(__dirname, 'src/stores'),
+      '@composables': resolve(__dirname, 'src/composables'),
+      '@utils': resolve(__dirname, 'src/utils'),
+      '@constants': resolve(__dirname, 'src/constants'),
+      '@services': resolve(__dirname, 'src/services'),
+      '@assets': resolve(__dirname, 'src/assets')
     },
   },
+  build: {
+    rollupOptions: {
+      output: {
+        manualChunks: {
+          vendor: ['vue', 'vue-router', 'pinia'],
+          utils: ['@vueuse/core', 'date-fns'],
+          ui: ['axios']
+        }
+      }
+    },
+    chunkSizeWarningLimit: 1000
+  },
+  server: {
+    port: 5173,
+    host: true,
+    open: true
+  },
+  preview: {
+    port: 4173,
+    host: true
+  }
 })

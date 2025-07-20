@@ -43,6 +43,15 @@
 - Componentes reutilizables
 - Accesibilidad completa
 
+### 🏗️ **Arquitectura Escalable**
+- Composable pattern para lógica reutilizable
+- Sistema de validación centralizado
+- Utilidades de formateo consistentes
+- Constantes centralizadas
+- Componentes base reutilizables
+- Code splitting y optimización de build
+- ESLint + Prettier para calidad de código
+
 ## 📋 **Tabla de Contenidos**
 
 - [Instalación](#-instalación)
