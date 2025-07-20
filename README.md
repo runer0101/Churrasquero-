@@ -1,4 +1,4 @@
-# 🔥 Churasquero - Churrasquería a Domicilio
+# Churasquero - Churrasquería a Domicilio
 
 [![Vue.js](https://img.shields.io/badge/Vue.js-3.5.17-4FC08D?style=for-the-badge&logo=vue.js)](https://vuejs.org/)
 [![Vite](https://img.shields.io/badge/Vite-7.0.0-646CFF?style=for-the-badge&logo=vite)](https://vitejs.dev/)
@@ -54,15 +54,15 @@
 
 ## 📋 **Tabla de Contenidos**
 
-- [Instalación](#-instalación)
-- [Uso](#-uso)
-- [Estructura del Proyecto](#-estructura-del-proyecto)
-- [Tecnologías](#-tecnologías)
-- [Funcionalidades](#-funcionalidades)
-- [API](#-api)
-- [Deployment](#-deployment)
-- [Contribuir](#-contribuir)
-- [Licencia](#-licencia)
+- [Instalación](#instalación)
+- [Uso](#uso)
+- [Estructura del Proyecto](#estructura-del-proyecto)
+- [Tecnologías](#tecnologías)
+- [Funcionalidades](#funcionalidades)
+- [API](#api)
+- [Deployment](#deployment)
+- [Contribuir](#contribuir)
+- [Licencia](#licencia)
 
 ## 🛠 **Instalación**
 
